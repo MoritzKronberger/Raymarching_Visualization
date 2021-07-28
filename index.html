@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Raymarching</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+    <script src="index.js"></script>
+    <style>
+    html{
+        background-color:rgb(250,250,251);
+        color: rgb(36, 36, 38);
+        font-family: Helvetica, Arial, sans-serif;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    #text{
+        margin-top: 2em;
+        margin-bottom: 4em;
+    }
+    input{
+        margin-bottom: 1.2em;
+    }
+    input[type=number]{
+        border: none;
+        background-color: rgb(235,235,235);
+        border-radius: .5em;
+        width: 3em;
+        -moz-appearance: textfield;
+        padding: .5em;
+    }
+    input[type=checkbox]{
+        border: none;
+        padding: none;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input:focus{
+        outline: none;
+        background-color: whitesmoke;
+    }
+    canvas{
+        border-radius: 1em;
+    }
+    </style>
+</head>
+<body>
+    <div id="text">
+        <h1>2D - Raymarching Visualisierung</h1>
+        <p>Zum Ändern der Strahlrichtung scrollen oder Strahl mit gedrückter Maustaste verschieben.</p>
+        <p>Kreis-Primitiv und Augpunkt mit gedrückter Maustaste verschieben.</p>
+        <p>Mit S-Taste Screenshot aufnehmen.</p>
+    </div>
+    </div>
+    <main></main>
+    <div><p id="raySteps"></p></div>
+    <form action="setMaxSteps">
+        <label for="epsilon">Epsilon</label>
+        <input type="number" id="epsilon" name="epsilon">
+        <br>
+        <label for="maxSteps">Maximale Schrittzahl</label>
+        <input type="number" id="maxSteps" name="maxSteps">
+        <br>
+        <input type="checkbox" id="showRay" name="showRay">
+        <label for="showRay">Strahl anzeigen</label>
+    </form>
+</body>
+</html>
